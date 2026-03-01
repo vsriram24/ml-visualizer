@@ -33,6 +33,13 @@ export default function LogisticRegressionPage() {
       complexity="O(nd) per gradient step"
       equation="P(y=1\mid x) = \sigma(\mathbf{x}^\top \boldsymbol{\theta}) = \frac{1}{1 + e^{-\mathbf{x}^\top\boldsymbol{\theta}}}"
       equationLabel="Logistic function — maps any linear score to a probability in [0, 1]"
+      equationVars={[
+        { sym: 'P(y=1 \\mid x)', desc: 'Predicted probability that input x belongs to the positive class' },
+        { sym: '\\sigma(\\cdot)', desc: 'Sigmoid function — squashes any real value to the interval (0, 1)' },
+        { sym: '\\mathbf{x}', desc: 'Input feature vector' },
+        { sym: '\\boldsymbol{\\theta}', desc: 'Learned weight vector (including bias)' },
+        { sym: '\\mathbf{x}^\\top\\boldsymbol{\\theta}', desc: 'Linear score (logit) — positive values favor class 1, negative favor class 0' },
+      ]}
       description="Logistic regression predicts the probability that an input belongs to the positive class by passing a linear score through the sigmoid function. It is trained by maximizing the log-likelihood (equivalent to minimizing binary cross-entropy) via gradient descent. Despite its name, it is a classification model, not a regression model."
       keyIdeas={[
         'The sigmoid σ(z) = 1/(1+e⁻ᶻ) squashes any real-valued score into a probability [0, 1].',

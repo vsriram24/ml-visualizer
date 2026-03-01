@@ -38,6 +38,14 @@ export default function RAGPage() {
       tagline="Ground LLM responses in specific documents by retrieving relevant passages and including them in the prompt."
       equation="\hat{y} = \text{LLM}(q,\, \text{retrieve}(q, \mathcal{D})), \quad \text{retrieve}(q) = \text{top-}k \arg\max_{d \in \mathcal{D}} \text{sim}(\text{emb}(q), \text{emb}(d))"
       equationLabel="RAG: generate conditioned on query q and top-k retrieved documents from corpus 𝒟"
+      equationVars={[
+        { sym: '\\hat{y}', desc: 'Generated answer from the LLM, grounded in retrieved context' },
+        { sym: 'q', desc: 'User query (natural language question)' },
+        { sym: '\\mathcal{D}', desc: 'Document corpus — the external knowledge base indexed at retrieval time' },
+        { sym: 'k', desc: 'Number of top documents to retrieve and inject into the LLM prompt' },
+        { sym: '\\text{emb}(\\cdot)', desc: 'Embedding function — maps text to a dense vector in semantic space' },
+        { sym: '\\text{sim}(\\cdot, \\cdot)', desc: 'Similarity function (typically cosine similarity) between query and document embeddings' },
+      ]}
       description="Retrieval-Augmented Generation (RAG) combines parametric knowledge (stored in LLM weights) with non-parametric knowledge (retrieved from an external document store). Documents are pre-embedded into a vector database; at query time, the query is embedded and the k most similar chunks are retrieved and prepended to the LLM's prompt as context. This enables accurate, up-to-date, and verifiable responses grounded in specific sources."
       keyIdeas={[
         'Indexing pipeline: chunk documents → embed with dense retriever (e.g., OpenAI ada-002, BGE, E5) → store in vector database (FAISS, Pinecone, Chroma).',

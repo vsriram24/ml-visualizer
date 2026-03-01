@@ -50,6 +50,15 @@ export default function DiffusionPage() {
       tagline="Learn to reverse a gradual noising process, generating data by iteratively denoising pure noise."
       equation="q(x_t | x_0) = \mathcal{N}\!\left(x_t;\, \sqrt{\bar\alpha_t}\, x_0,\; (1-\bar\alpha_t)\mathbf{I}\right)"
       equationLabel="Forward process: xₜ is a noisy version of x₀ controlled by noise schedule ᾱₜ"
+      equationVars={[
+        { sym: 'q(x_t \\mid x_0)', desc: 'Forward (noising) process — distribution of the noisy sample xₜ given the clean original x₀' },
+        { sym: 'x_0', desc: 'Original clean data (e.g., a real image)' },
+        { sym: 'x_t', desc: 'Noisy version of the data at timestep t — increasingly corrupted as t grows' },
+        { sym: 't', desc: 'Diffusion timestep — ranges from 0 (clean) to T (pure noise, typically T = 1000)' },
+        { sym: '\\bar{\\alpha}_t', desc: 'Cumulative noise schedule coefficient — controls how much signal is retained at step t; approaches 0 as t → T' },
+        { sym: '\\mathcal{N}(\\mu, \\sigma^2 \\mathbf{I})', desc: 'Isotropic Gaussian distribution with mean μ and variance σ²' },
+        { sym: '\\mathbf{I}', desc: 'Identity matrix — noise is added independently to each dimension' },
+      ]}
       description="Diffusion models define a forward Markov chain that gradually adds Gaussian noise to data over T timesteps until the signal becomes pure noise. A neural network (typically a U-Net) is trained to reverse this process — predicting the noise ε added at each step, so it can iteratively denoise from pure noise to a clean sample. DDPM (Ho et al., 2020) showed this matches or exceeds GAN quality on images. Score-based models (Song & Ermon) provide a continuous-time perspective."
       keyIdeas={[
         'Forward process qφ(xₜ|x₀) is fixed: each step adds a small Gaussian noise. After T=1000 steps, the data is completely isotropic Gaussian noise.',

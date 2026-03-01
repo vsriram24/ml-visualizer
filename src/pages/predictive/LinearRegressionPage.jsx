@@ -34,6 +34,14 @@ export default function LinearRegressionPage() {
       complexity="O(nd) per gradient step; O(nd²) closed form"
       equation="\hat{y} = \theta_0 + \theta_1 x_1 + \cdots + \theta_d x_d = \mathbf{x}^\top \boldsymbol{\theta}"
       equationLabel="Prediction equation"
+      equationVars={[
+        { sym: '\\hat{y}', desc: 'Predicted continuous output' },
+        { sym: '\\theta_0', desc: 'Bias (intercept) term — shifts the line vertically' },
+        { sym: '\\theta_1, \\ldots, \\theta_d', desc: 'Learned weight for each input feature' },
+        { sym: 'x_1, \\ldots, x_d', desc: 'Input features (d-dimensional)' },
+        { sym: '\\mathbf{x}', desc: 'Feature vector (including bias column of 1s)' },
+        { sym: '\\boldsymbol{\\theta}', desc: 'Full parameter vector — minimized via MSE loss' },
+      ]}
       description="Linear regression models the relationship between a continuous target y and features x as a linear function. Parameters θ are estimated by minimizing the Mean Squared Error (MSE) loss — equivalent to finding the ordinary least squares solution. The closed-form normal equation gives the exact solution; gradient descent is preferred for large-scale data."
       keyIdeas={[
         'Assumes a linear relationship between inputs and output. Non-linearity requires feature engineering (polynomial features) or non-linear models.',

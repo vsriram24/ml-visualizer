@@ -38,6 +38,14 @@ export default function TransformerPage() {
       tagline="Replace sequential processing with parallel self-attention, letting each token attend to every other."
       equation="\text{Attention}(Q,K,V) = \text{softmax}\!\left(\frac{QK^\top}{\sqrt{d_k}}\right)V"
       equationLabel="Scaled dot-product attention — queries Q attend to keys K, retrieve values V"
+      equationVars={[
+        { sym: 'Q', desc: 'Query matrix — encodes what each token is looking for' },
+        { sym: 'K', desc: 'Key matrix — encodes what each token offers to other queries' },
+        { sym: 'V', desc: 'Value matrix — the actual content retrieved when a key is matched' },
+        { sym: 'd_k', desc: 'Dimension of queries and keys — used to scale dot products and prevent vanishing gradients' },
+        { sym: 'QK^\\top', desc: 'Raw attention scores — dot product similarity between every query-key pair' },
+        { sym: '\\text{softmax}', desc: 'Normalizes scores to a probability distribution over positions' },
+      ]}
       description="The Transformer architecture (Vaswani et al., 2017) replaces recurrence with self-attention, allowing all positions to attend to each other in parallel. This eliminates the sequential bottleneck of RNNs and enables efficient parallelization on GPUs. Multi-head attention runs h attention functions in parallel, each learning different relationship patterns (syntactic, semantic, positional). Combined with positional encodings and feedforward sublayers, Transformers are the foundation of GPT, BERT, T5, and virtually all modern large language models."
       keyIdeas={[
         'Self-attention: each position computes queries (what am I looking for?), keys (what do I offer?), and values (what do I provide?). Attention weights are softmax(QKᵀ/√dₖ).',

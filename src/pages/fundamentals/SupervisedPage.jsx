@@ -10,6 +10,14 @@ export default function SupervisedPage() {
       type="supervised"
       equation="\hat{y} = f_\theta(x), \quad \mathcal{L} = \frac{1}{n}\sum_{i=1}^{n} \ell(y_i, \hat{y}_i)"
       equationLabel="Objective: minimize loss over labeled training pairs (x, y)"
+      equationVars={[
+        { sym: '\\hat{y}', desc: 'Predicted output of the model' },
+        { sym: 'f_\\theta(x)', desc: 'Model function with learned parameters θ' },
+        { sym: '\\mathcal{L}', desc: 'Empirical loss averaged over the training set' },
+        { sym: 'n', desc: 'Number of labeled training examples' },
+        { sym: 'y_i', desc: 'Ground-truth label for the i-th example' },
+        { sym: '\\ell(y_i, \\hat{y}_i)', desc: 'Per-example loss (e.g., MSE for regression, cross-entropy for classification)' },
+      ]}
       description="In supervised learning, a model is trained on a dataset of input-output pairs (x, y). The model learns a mapping function f_θ that minimizes prediction error (loss) over the training set. At inference time, the trained model generalizes to new, unseen inputs. Supervised learning encompasses both regression (continuous targets) and classification (discrete labels)."
       keyIdeas={[
         'Requires a labeled dataset — every training example has a known ground-truth output.',

@@ -46,6 +46,15 @@ export default function GANPage() {
       tagline="Train a generator and discriminator in a minimax game until generated samples are indistinguishable from real data."
       equation="\min_G \max_D \; \mathbb{E}_{x \sim p_\text{data}}\!\left[\log D(x)\right] + \mathbb{E}_{z \sim p_z}\!\left[\log(1 - D(G(z)))\right]"
       equationLabel="GAN minimax objective — G minimizes, D maximizes"
+      equationVars={[
+        { sym: 'G', desc: 'Generator network — maps random noise z to synthetic samples G(z)' },
+        { sym: 'D', desc: 'Discriminator network — outputs probability that its input is real (not generated)' },
+        { sym: 'x \\sim p_\\text{data}', desc: 'Real data sample drawn from the true data distribution' },
+        { sym: 'z \\sim p_z', desc: 'Random noise vector (latent code), typically sampled from N(0, I)' },
+        { sym: 'G(z)', desc: 'Generated (fake) sample produced by the generator from noise z' },
+        { sym: 'D(x)', desc: "Discriminator's probability that sample x is real — D tries to maximize this for real data" },
+        { sym: 'D(G(z))', desc: "Discriminator's probability that a generated sample is real — G tries to maximize this, D tries to minimize it" },
+      ]}
       description="GANs consist of two neural networks in adversarial competition: the Generator G maps random noise z to synthetic data G(z), while the Discriminator D tries to distinguish real data from fake. Trained together, G is pushed to generate increasingly realistic outputs to fool D, while D becomes better at detection. At Nash equilibrium, G produces samples from the true data distribution and D can only guess randomly."
       keyIdeas={[
         'The minimax game: D tries to maximize the objective (correctly classify real vs. fake); G tries to minimize it (fool D).',

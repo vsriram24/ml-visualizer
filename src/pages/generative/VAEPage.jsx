@@ -44,6 +44,14 @@ export default function VAEPage() {
       tagline="Learn a continuous, structured latent space by enforcing a probabilistic prior on the encoded representations."
       equation="\mathcal{L}_\text{ELBO} = \mathbb{E}_{q_\phi(z|x)}\!\left[\log p_\theta(x|z)\right] - D_\text{KL}\!\left(q_\phi(z|x) \;\|\; p(z)\right)"
       equationLabel="ELBO: reconstruction term (maximize) − KL divergence (regularize)"
+      equationVars={[
+        { sym: '\\mathcal{L}_\\text{ELBO}', desc: 'Evidence Lower BOund — the training objective to maximize' },
+        { sym: 'q_\\phi(z|x)', desc: 'Encoder (approximate posterior) — maps input x to a distribution over latent z, parameterized by φ' },
+        { sym: 'p_\\theta(x|z)', desc: 'Decoder (likelihood) — reconstructs input x from latent z, parameterized by θ' },
+        { sym: 'z', desc: 'Latent variable — a compact, continuous representation of the input' },
+        { sym: 'D_\\text{KL}', desc: 'KL divergence — measures how much the learned posterior q differs from the prior p(z)' },
+        { sym: 'p(z)', desc: 'Prior distribution on the latent space, typically N(0, I) — enforces a structured, smooth latent space' },
+      ]}
       description="VAEs are latent variable models with a two-part objective: the encoder qφ(z|x) maps inputs to a distribution over latent variables z, and the decoder pθ(x|z) reconstructs inputs from z. The ELBO loss maximizes reconstruction quality while minimizing the KL divergence between the learned posterior and a standard Gaussian prior N(0, I). The reparameterization trick makes the stochastic sampling step differentiable."
       keyIdeas={[
         'The reparameterization trick: instead of sampling z ~ q(z|x) directly (non-differentiable), compute z = μ + ε·σ where ε ~ N(0,I). Gradients flow through μ and σ.',

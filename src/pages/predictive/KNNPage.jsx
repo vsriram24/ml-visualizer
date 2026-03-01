@@ -34,6 +34,13 @@ export default function KNNPage() {
       complexity="O(nd) per query (brute force); O(d log n) with KD-tree"
       equation="\hat{y} = \text{majority\_vote}\bigl(\{y_i : i \in \mathcal{N}_K(x)\}\bigr), \quad \mathcal{N}_K(x) = K \text{ nearest training points}"
       equationLabel="KNN prediction: majority vote among K nearest neighbors"
+      equationVars={[
+        { sym: '\\hat{y}', desc: 'Predicted class label for query point x' },
+        { sym: 'K', desc: 'Number of nearest neighbors to consider — smaller K = more local, larger K = smoother boundary' },
+        { sym: '\\mathcal{N}_K(x)', desc: 'Set of K training points closest to query x under the chosen distance metric' },
+        { sym: 'y_i', desc: 'Class label of the i-th neighbor' },
+        { sym: '\\text{majority\\_vote}', desc: 'Returns the most common class label among the K neighbors' },
+      ]}
       description="K-Nearest Neighbors is a non-parametric, instance-based learning algorithm. It makes no assumptions about the data distribution — it simply memorizes the training set. At inference time, it finds the K closest training points to the query (by Euclidean or other distance) and returns the majority class. KNN has no training cost but high inference cost and memory usage."
       keyIdeas={[
         'KNN is lazy — it stores the entire training set and defers all computation to inference time.',

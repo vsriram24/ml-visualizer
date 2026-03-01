@@ -10,6 +10,7 @@ export function AlgorithmLayout({
   complexity,
   equation,
   equationLabel,
+  equationVars,  // { sym: string (LaTeX), desc: string }[]
   description,
   keyIdeas,      // string[]
   children,      // visualization(s)
@@ -42,6 +43,18 @@ export function AlgorithmLayout({
             <p className="text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-300 mb-2">{equationLabel}</p>
           )}
           <MathDisplay tex={equation} block />
+          {equationVars?.length > 0 && (
+            <dl className="mt-3 pt-3 border-t border-slate-200 dark:border-slate-700 grid grid-cols-[auto_1fr] gap-x-4 gap-y-1.5">
+              {equationVars.map(({ sym, desc }, i) => (
+                <>
+                  <dt key={`sym-${i}`} className="text-right leading-snug py-0.5">
+                    <MathDisplay tex={sym} />
+                  </dt>
+                  <dd key={`desc-${i}`} className="text-xs text-slate-600 dark:text-slate-400 leading-snug py-0.5">{desc}</dd>
+                </>
+              ))}
+            </dl>
+          )}
         </div>
       )}
 
