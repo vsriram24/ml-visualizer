@@ -45,16 +45,16 @@ export default function HomePage() {
       <section className="py-16 md:py-24 text-center max-w-3xl mx-auto">
         <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-50 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400 text-xs font-semibold uppercase tracking-wide mb-6">
           <span className="w-1.5 h-1.5 rounded-full bg-brand-500 animate-pulse" />
-          Open-source · Interactive · Citable
+          Open-source · Interactive
         </div>
         <h1 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-slate-100 leading-tight mb-5">
           Understand Machine Learning{' '}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-500 to-violet-500 animated-gradient">
-            Through Interaction
+            Through Visualization
           </span>
         </h1>
         <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed mb-8 max-w-2xl mx-auto">
-          Visualize and explore 20+ ML and AI algorithms — from supervised learning basics to generative AI and autonomous agents — with animated, interactive visualizations built for data scientists.
+          Visualize and explore 20+ ML and AI algorithms – from supervised learning basics to generative AI and autonomous agents — with animated, interactive visualizations built for data scientists.
         </p>
         <div className="flex flex-wrap items-center justify-center gap-3">
           <Link
@@ -118,7 +118,7 @@ export default function HomePage() {
       <section className="py-10 border-t border-slate-200 dark:border-slate-800">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           {[
-            { icon: '🎮', label: 'Interactive', desc: 'Drag, click, adjust sliders — see results instantly' },
+            { icon: '🎮', label: 'Interactive', desc: 'Drag, click, and adjust sliders to see results instantly' },
             { icon: '📐', label: 'Mathematical', desc: 'Core equations rendered with LaTeX for every algorithm' },
             { icon: '📚', label: 'Cited Sources', desc: 'All content linked to original papers and textbooks' },
             { icon: '🌙', label: 'Dark Mode', desc: 'Easy on the eyes whether you code at noon or midnight' },
