@@ -43,18 +43,20 @@ export default function HomePage() {
     <PageWrapper title="">
       {/* Hero */}
       <section className="py-16 md:py-24 text-center max-w-3xl mx-auto">
-        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-50 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400 text-xs font-semibold uppercase tracking-wide mb-6">
-          <span className="w-1.5 h-1.5 rounded-full bg-brand-500 animate-pulse" />
+        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-900/40 text-brand-400 text-xs font-semibold uppercase tracking-wide mb-6">
+          <span className="w-1.5 h-1.5 rounded-full bg-brand-400 animate-pulse" />
           Open-source · Interactive
         </div>
-        <h1 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-slate-100 leading-tight mb-5">
-          Understand Machine Learning{' '}
+        <h1 className="text-5xl md:text-6xl font-bold text-slate-100 leading-tight mb-3">
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-cyan-400 animated-gradient">
-            Through Visualization
+            Manifold
           </span>
         </h1>
-        <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed mb-8 max-w-2xl mx-auto">
-          Visualize and explore 20+ ML and AI algorithms – from supervised learning basics to generative AI and autonomous agents — with animated, interactive visualizations built for data scientists.
+        <p className="text-sm text-slate-500 mb-6 italic">
+          In mathematics, a manifold is a high-dimensional space that locally resembles a simpler, flat surface — the same principle behind why machine learning works: complex data, hidden structure.
+        </p>
+        <p className="text-lg text-slate-400 leading-relaxed mb-8 max-w-2xl mx-auto">
+          Explore 20+ ML and AI algorithms — from supervised learning basics to generative AI and autonomous agents — through animated, interactive visualizations built for data scientists.
         </p>
         <div className="flex flex-wrap items-center justify-center gap-3">
           <Link

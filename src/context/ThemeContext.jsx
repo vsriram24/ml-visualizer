@@ -1,26 +1,14 @@
-import { createContext, useContext, useState, useEffect } from 'react'
+import { createContext, useContext, useEffect } from 'react'
 
 const ThemeContext = createContext(null)
 
 export function ThemeProvider({ children }) {
-  const [dark, setDark] = useState(() => {
-    const stored = localStorage.getItem('ml-viz-theme')
-    if (stored) return stored === 'dark'
-    return true
-  })
-
   useEffect(() => {
-    const root = document.documentElement
-    if (dark) {
-      root.classList.add('dark')
-    } else {
-      root.classList.remove('dark')
-    }
-    localStorage.setItem('ml-viz-theme', dark ? 'dark' : 'light')
-  }, [dark])
+    document.documentElement.classList.add('dark')
+  }, [])
 
   return (
-    <ThemeContext.Provider value={{ dark, toggle: () => setDark(d => !d) }}>
+    <ThemeContext.Provider value={{ dark: true }}>
       {children}
     </ThemeContext.Provider>
   )
