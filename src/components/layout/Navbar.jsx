@@ -46,6 +46,17 @@ export function Navbar() {
             >
               References
             </NavLink>
+            <NavLink
+              to="/about"
+              className={({ isActive }) =>
+                `px-3 py-1.5 text-sm font-medium rounded-lg transition-colors focus-ring
+                 ${isActive
+                   ? 'bg-brand-900/40 text-brand-400'
+                   : 'text-slate-400 hover:text-slate-100 hover:bg-slate-800'}`
+              }
+            >
+              About
+            </NavLink>
           </div>
 
           {/* Mobile menu button */}
@@ -93,6 +104,18 @@ export function Navbar() {
             }
           >
             References
+          </NavLink>
+          <NavLink
+            to="/about"
+            onClick={() => setMobileOpen(false)}
+            className={({ isActive }) =>
+              `px-3 py-2 text-sm font-medium rounded-lg transition-colors
+               ${isActive
+                 ? 'bg-brand-900/40 text-brand-400'
+                 : 'text-slate-400'}`
+            }
+          >
+            About
           </NavLink>
         </div>
       )}

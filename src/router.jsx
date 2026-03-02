@@ -59,8 +59,9 @@ const ApplicationsPage    = L(() => import('./pages/applications/ApplicationsPag
 const RAGPage             = L(() => import('./pages/applications/RAGPage'))
 const AgentsPage          = L(() => import('./pages/applications/AgentsPage'))
 
-// References
+// References / About
 const ReferencesPage      = L(() => import('./pages/ReferencesPage'))
+const AboutPage           = L(() => import('./pages/AboutPage'))
 const NotFoundPage        = L(() => import('./pages/NotFoundPage'))
 
 export const router = createBrowserRouter([
@@ -136,6 +137,7 @@ export const router = createBrowserRouter([
       },
 
       { path: 'references', element: <ReferencesPage /> },
+      { path: 'about',      element: <AboutPage /> },
       { path: '*', element: <NotFoundPage /> },
     ],
   },
