@@ -2,8 +2,8 @@ import { useEffect } from 'react'
 
 export function PageWrapper({ title, children, className = '' }) {
   useEffect(() => {
-    if (title) document.title = `${title} — ML Visualizer`
-    else document.title = 'ML Visualizer'
+    if (title) document.title = `${title} — ML Explorer`
+    else document.title = 'ML Explorer'
   }, [title])
 
   return (

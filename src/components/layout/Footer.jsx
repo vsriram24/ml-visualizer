@@ -5,7 +5,7 @@ export function Footer() {
     <footer className="border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 mt-16">
       <div className="max-w-screen-xl mx-auto px-4 md:px-8 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
         <div className="text-center md:text-left">
-          <p className="text-sm font-semibold text-slate-900 dark:text-slate-100">ML Visualizer</p>
+          <p className="text-sm font-semibold text-slate-900 dark:text-slate-100">ML Explorer</p>
           <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
             Open-source interactive visualizations for machine learning and AI.
           </p>

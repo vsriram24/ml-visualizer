@@ -49,7 +49,7 @@ export default function HomePage() {
         </div>
         <h1 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-slate-100 leading-tight mb-5">
           Understand Machine Learning{' '}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-500 to-violet-500 animated-gradient">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-cyan-400 animated-gradient">
             Through Visualization
           </span>
         </h1>
