@@ -49,14 +49,11 @@ export default function HomePage() {
         </div>
         <h1 className="text-5xl md:text-6xl font-bold text-slate-100 leading-tight mb-3">
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-300 to-slate-300 animated-gradient">
-            Manifold
+            Machine Learning Vista
           </span>
         </h1>
-        <p className="text-sm text-slate-500 mb-6 italic">
-          In mathematics, a manifold is a high-dimensional space that locally resembles a simpler, flat surface — the same principle behind why machine learning works: complex data, hidden structure.
-        </p>
         <p className="text-lg text-slate-400 leading-relaxed mb-8 max-w-2xl mx-auto">
-          Explore 20+ ML and AI algorithms — from supervised learning basics to generative AI and autonomous agents — through animated, interactive visualizations built for data scientists.
+          Explore 20+ ML and AI algorithms, from supervised learning basics to generative AI and autonomous agents, through animated, interactive visualizations built for data scientists.
         </p>
         <div className="flex flex-wrap items-center justify-center gap-3">
           <Link

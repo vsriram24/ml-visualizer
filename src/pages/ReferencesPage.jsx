@@ -42,7 +42,7 @@ export default function ReferencesPage() {
         <div className="mb-8">
           <h1 className="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-2">References</h1>
           <p className="text-slate-600 dark:text-slate-400">
-            All sources cited throughout Manifold, including {allCites.length} references from papers, textbooks, and online resources.
+            All sources cited throughout Machine Learning Vista, including {allCites.length} references from papers, textbooks, and online resources.
           </p>
         </div>
 
