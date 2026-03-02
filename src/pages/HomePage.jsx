@@ -48,7 +48,7 @@ export default function HomePage() {
           Open-source · Interactive
         </div>
         <h1 className="text-5xl md:text-6xl font-bold text-slate-100 leading-tight mb-3">
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-cyan-400 animated-gradient">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-300 to-slate-300 animated-gradient">
             Manifold
           </span>
         </h1>

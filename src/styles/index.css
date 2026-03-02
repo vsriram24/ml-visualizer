@@ -4,15 +4,15 @@
 
 @layer base {
   :root {
-    --bg-primary: #ffffff;
-    --text-primary: #0f172a;
-    --border-color: #e2e8f0;
+    --bg-primary: #0B2027;
+    --text-primary: #F6F1D1;
+    --border-color: #1A3D4A;
   }
 
   .dark {
-    --bg-primary: #0f172a;
-    --text-primary: #f1f5f9;
-    --border-color: #1e293b;
+    --bg-primary: #0B2027;
+    --text-primary: #F6F1D1;
+    --border-color: #1A3D4A;
   }
 
   html {
@@ -23,16 +23,16 @@
     @apply bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 font-sans transition-colors duration-200;
   }
 
-  /* KaTeX dark mode overrides */
+  /* KaTeX — always dark, use warm cream */
   .dark .katex {
-    color: #f1f5f9;
+    color: #F6F1D1;
   }
 
   /* Custom scrollbar */
   ::-webkit-scrollbar { width: 6px; height: 6px; }
   ::-webkit-scrollbar-track { @apply bg-slate-100 dark:bg-slate-800; }
-  ::-webkit-scrollbar-thumb { @apply bg-slate-300 dark:bg-slate-600 rounded-full; }
-  ::-webkit-scrollbar-thumb:hover { @apply bg-slate-400 dark:bg-slate-500; }
+  ::-webkit-scrollbar-thumb { @apply bg-slate-300 dark:bg-slate-700 rounded-full; }
+  ::-webkit-scrollbar-thumb:hover { @apply bg-slate-400 dark:bg-slate-600; }
 }
 
 @layer components {
@@ -57,16 +57,16 @@
 
 /* D3 visualization styles */
 .viz-svg text {
-  font-family: 'Inter', sans-serif;
+  font-family: 'DM Sans', sans-serif;
 }
 
 .dark .viz-svg text {
-  fill: #e2e8f0;
+  fill: #CFD7C7;
 }
 
 .dark .viz-svg .axis line,
 .dark .viz-svg .axis path {
-  stroke: #475569;
+  stroke: #1A3D4A;
 }
 
 /* Animated gradient for hero */
@@ -82,5 +82,5 @@
 
 /* Tooltip */
 .viz-tooltip {
-  @apply absolute pointer-events-none bg-slate-900 dark:bg-slate-700 text-white text-xs px-2 py-1 rounded shadow-lg z-50 whitespace-nowrap;
+  @apply absolute pointer-events-none bg-slate-900 dark:bg-slate-800 text-slate-100 text-xs px-2 py-1 rounded shadow-lg z-50 whitespace-nowrap;
 }

@@ -9,17 +9,29 @@ export default {
         mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
       },
       colors: {
+        // Brand palette built from user's #40798C (500) and #70A9A1 (300)
         brand: {
-          50:  '#f0fdfa',
-          100: '#ccfbf1',
-          200: '#99f6e4',
-          300: '#5eead4',
-          400: '#2dd4bf',
-          500: '#14b8a6',
-          600: '#0d9488',
-          700: '#0f766e',
-          800: '#115e59',
-          900: '#134e4a',
+          50:  '#edf6f5',
+          100: '#d0e9e6',
+          200: '#a0d0c9',
+          300: '#70A9A1',  // user's lighter teal
+          400: '#589196',
+          500: '#40798C',  // user's primary brand
+          600: '#336170',
+          700: '#264A58',
+          800: '#1A3342',
+          900: '#0D1D2A',
+        },
+        // Override specific slate shades to map user's hex codes onto the
+        // existing dark:bg-slate-* / dark:text-slate-* classes in every component.
+        // Tailwind deep-merges extend.colors.slate with the default palette.
+        slate: {
+          100: '#F6F1D1',  // warm cream  — primary headings & text
+          300: '#CFD7C7',  // sage gray   — body text
+          400: '#9AAEAD',  // muted teal  — placeholders, captions
+          700: '#1A3D4A',  // dark teal   — borders
+          800: '#0F2B35',  // deeper teal — card backgrounds
+          900: '#0B2027',  // near-black  — main background (user's darkest)
         },
         accent: {
           cyan:   '#06b6d4',
