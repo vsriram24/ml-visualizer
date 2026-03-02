@@ -51,6 +51,24 @@ export const citations = {
   },
 
   /* ── Deep Learning ───────────────────────────── */
+  'kipf2017gcn': {
+    id: 'kipf2017gcn',
+    authors: ['Kipf, T. N.', 'Welling, M.'],
+    year: 2017,
+    title: 'Semi-Supervised Classification with Graph Convolutional Networks',
+    venue: 'International Conference on Learning Representations (ICLR)',
+    url: 'https://arxiv.org/abs/1609.02907',
+    type: 'conference',
+  },
+  'hamilton2017graphsage': {
+    id: 'hamilton2017graphsage',
+    authors: ['Hamilton, W.', 'Ying, R.', 'Leskovec, J.'],
+    year: 2017,
+    title: 'Inductive Representation Learning on Large Graphs',
+    venue: 'Advances in Neural Information Processing Systems (NeurIPS)',
+    url: 'https://arxiv.org/abs/1706.02216',
+    type: 'conference',
+  },
   'vaswani2017attention': {
     id: 'vaswani2017attention',
     authors: ['Vaswani, A.', 'Shazeer, N.', 'Parmar, N.', 'Uszkoreit, J.', 'Jones, L.', 'Gomez, A. N.', 'Kaiser, Ł.', 'Polosukhin, I.'],
@@ -77,6 +95,15 @@ export const citations = {
     venue: 'Neural Computation, 9(8), 1735–1780',
     url: 'https://www.bioinf.jku.at/publications/older/2604.pdf',
     type: 'journal',
+  },
+  'cho2014gru': {
+    id: 'cho2014gru',
+    authors: ['Cho, K.', 'van Merrienboer, B.', 'Gulcehre, C.', 'Bahdanau, D.', 'Bougares, F.', 'Schwenk, H.', 'Bengio, Y.'],
+    year: 2014,
+    title: 'Learning Phrase Representations using RNN Encoder-Decoder for Statistical Machine Translation',
+    venue: 'Empirical Methods in Natural Language Processing (EMNLP)',
+    url: 'https://arxiv.org/abs/1406.1078',
+    type: 'conference',
   },
   'rumelhart1986backprop': {
     id: 'rumelhart1986backprop',

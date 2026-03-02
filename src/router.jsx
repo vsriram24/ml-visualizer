@@ -45,6 +45,9 @@ const DeepLearningPage    = L(() => import('./pages/deep-learning/DeepLearningPa
 const FeedForwardPage     = L(() => import('./pages/deep-learning/FeedForwardPage'))
 const CNNPage             = L(() => import('./pages/deep-learning/CNNPage'))
 const RNNPage             = L(() => import('./pages/deep-learning/RNNPage'))
+const LSTMPage            = L(() => import('./pages/deep-learning/LSTMPage'))
+const GRUPage             = L(() => import('./pages/deep-learning/GRUPage'))
+const GNNPage             = L(() => import('./pages/deep-learning/GNNPage'))
 const TransformerPage     = L(() => import('./pages/deep-learning/TransformerPage'))
 
 // Generative
@@ -108,6 +111,9 @@ export const router = createBrowserRouter([
           { path: 'feedforward', element: <FeedForwardPage /> },
           { path: 'cnn',         element: <CNNPage /> },
           { path: 'rnn',         element: <RNNPage /> },
+          { path: 'lstm',        element: <LSTMPage /> },
+          { path: 'gru',         element: <GRUPage /> },
+          { path: 'gnn',         element: <GNNPage /> },
           { path: 'transformer', element: <TransformerPage /> },
         ],
       },

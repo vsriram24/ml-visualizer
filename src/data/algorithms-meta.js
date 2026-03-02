@@ -36,7 +36,10 @@ export const SECTIONS = [
     algorithms: [
       { id: 'feedforward', label: 'Feedforward Networks', path: '/deep-learning/feedforward' },
       { id: 'cnn', label: 'Convolutional Neural Networks', path: '/deep-learning/cnn' },
-      { id: 'rnn', label: 'RNNs & LSTMs', path: '/deep-learning/rnn' },
+      { id: 'rnn',  label: 'Vanilla RNN', path: '/deep-learning/rnn' },
+      { id: 'lstm', label: 'LSTM',        path: '/deep-learning/lstm' },
+      { id: 'gru',  label: 'GRU',         path: '/deep-learning/gru' },
+      { id: 'gnn',         label: 'Graph Neural Networks',  path: '/deep-learning/gnn' },
       { id: 'transformer', label: 'Transformers & Attention', path: '/deep-learning/transformer' },
     ],
   },

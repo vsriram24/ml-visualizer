@@ -115,12 +115,11 @@ export default function HomePage() {
 
       {/* Features strip */}
       <section className="py-10 border-t border-slate-200 dark:border-slate-800">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 text-center">
           {[
             { icon: '🎮', label: 'Interactive', desc: 'Drag, click, and adjust sliders to see results instantly' },
             { icon: '📐', label: 'Mathematical', desc: 'Core equations rendered with LaTeX for every algorithm' },
             { icon: '📚', label: 'Cited Sources', desc: 'All content linked to original papers and textbooks' },
-            { icon: '🌙', label: 'Dark Mode', desc: 'Easy on the eyes whether you code at noon or midnight' },
           ].map(f => (
             <div key={f.label} className="flex flex-col items-center gap-2">
               <span className="text-2xl">{f.icon}</span>
